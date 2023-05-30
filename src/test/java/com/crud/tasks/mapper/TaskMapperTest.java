@@ -1,5 +1,6 @@
 package com.crud.tasks.mapper;
 
+import com.crud.tasks.controller.TaskNotFoundException;
 import com.crud.tasks.domain.Task;
 import com.crud.tasks.domain.TaskDto;
 import org.junit.jupiter.api.DisplayName;
@@ -29,6 +30,7 @@ class TaskMapperTest {
         assertNotEquals("test", task.getTitle());
         assertNotEquals("Test Task", task.getContent());
     }
+
 
     @Test
     @DisplayName("Should map to task Dto")
