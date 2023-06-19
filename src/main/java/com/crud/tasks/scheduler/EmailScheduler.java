@@ -29,7 +29,7 @@ public class EmailScheduler {
     }
 
     private void sendMail(long size, String s) {
-        simpleEmailService.send(
+        simpleEmailService.sendOnePerDay(
                 Mail.builder()
                         .mailTo(adminConfig.getAdminMail())
                         .subject(SUBJECT)
